@@ -4,9 +4,10 @@ public class missing {
         int[] nums = {3,0,1};
 
 
-        int answer = elementFinder(nums);
+        // int answer = elementFinder(nums);
+         element(nums);
 
-        System.out.println(answer);
+        // System.out.println(answer);
 
         // int n = nums.length;
         // int[] array = new int[n];
@@ -33,4 +34,29 @@ public class missing {
         }
         return -1;
     }
+
+    //  2 : = ye wala thoda optimize hai 
+
+    public static void element(int[] nums) {
+
+        int sum = 0;
+        int index = 0;
+
+        for(int i = 0; i < nums.length; i++){
+
+            index++;
+            sum = sum + index;
+        }
+
+        for(int i = 0; i < nums.length; i++){
+
+            sum -= nums[i];
+
+        }
+
+        System.out.println(sum);
+        // return sum;
+
+    }
+    
 }
