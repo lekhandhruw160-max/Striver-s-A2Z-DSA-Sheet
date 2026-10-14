@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public  class threeSum {
@@ -13,7 +15,7 @@ public  class threeSum {
     public static void threesum(int[] nums){
 
         List<List<Integer>> n = new ArrayList<>();
-        int index = 0;
+      
 
         for(int i = 0; i < nums.length-2; i++){
 
@@ -23,35 +25,32 @@ public  class threeSum {
 
                     int sum = nums[i] + nums[j] + nums[x];
 
-                    if( sum == 0){
+                    if(sum == 0){
 
-                        n.add(new ArrayList<>());
+                        List<Integer> l = Arrays.asList(nums[i], nums[j] , nums[x]);
 
-                        n.get(index).add(0, nums[i]);
-                        n.get(index).add(1,nums[j]);
-                        n.get(index).add(2,nums[x]);
+                        Collections.sort(l);
 
-                        index++;
+                        if(!n.contains(l)){
+                            n.add(l);
+                        }
+
                     }
+                    
+
+                    
+
                 }
             }
         }
 
-        n.get(0).add(0, 5);
 
         for(int i = 0; i < n.size(); i++){
 
-            for(int j = i+1; j < n.size(); j++){
-
-                if(n.equals(i) == n.equals(j)){
-
-                    System.out.println("true");
-                }
-            }
+            System.out.println(n.get(i));
         }
 
-        // System.out.println(n);
-
+      
         
         
     }
