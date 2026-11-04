@@ -91,13 +91,16 @@ public class intersection {
 
         int[][] nums = {{3,1,2,4,5},{1,2,3,4},{3,4,5,6}};
 
-        intersectionn(nums);
+        List<Integer> nn = new ArrayList<>();
+        nn = intersectionn(nums);
 
 
 
     }
 
-    public   intersectionn(int[][] nums){
+    public List<Integer>   intersectionn(int[][] nums){
+
+        List<Integer> result = new ArrayList<>();
 
         int[] n = new int[1001];
 
@@ -115,10 +118,15 @@ public class intersection {
         for(int i = 0; i < n.length; i++){
 
             if(n[i] == nums.length){
-                System.out.println(i);
+
+                result.add(i);
+               
             }
            
         }
+
+        return result;
+
 
     }
 }
