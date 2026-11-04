@@ -97,7 +97,7 @@ public class intersection {
 
     }
 
-    public static void  intersectionn(int[][] nums){
+    public   intersectionn(int[][] nums){
 
         int[] n = new int[1001];
 
@@ -115,7 +115,7 @@ public class intersection {
         for(int i = 0; i < n.length; i++){
 
             if(n[i] == nums.length){
-                System.out.println(n[i]);
+                System.out.println(i);
             }
            
         }
